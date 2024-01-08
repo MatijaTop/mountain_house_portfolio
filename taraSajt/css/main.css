@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Croissant+One&family=Galada&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Alkatra', cursive;
+
+}
+body{
+    width: 100%;
+    height: fit-content;
+    
+}
+.container{
+    width: 100%;
+    height: fit-content;
+
+}
+.header{
+    width: 100%;
+    height: fit-content;
+    
+}
+
+.nav{
+    height: fit-content;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    width: 50%;
+    height:150px;
+    border-radius: 50%;
+    margin-left: 7%;
+}
+.logo img{
+    width: 200px;
+    height: 150px;
+   
+}
+.navbar{
+    width: 50%;
+    height: 100px;
+}
+ul{
+    display: flex;
+    width: 100%;
+    padding: 4% 0;
+    justify-content: space-evenly;
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    
+}
+ul li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #8f8d8b;
+}
+ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+ul li a:hover{
+    color: #a91010;
+}
+.banner{
+    width: 100%;
+    height: 50px;
+    
+    text-align: center;
+    font-size:25px;
+    margin: auto;
+    padding: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+.main{
+    width: 100%;
+    padding: 100px 10%;
+    text-align: center;
+}
+.aktivnosti{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.aktivnosti h1{
+    margin-bottom: 40px;
+    font-size: 40px;
+    color:#000000;
+}
+.aktivnost{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius:20px;
+    font-size: 20px;
+}
+.aktivnost img{
+    width: 25%;
+    min-height: 200px;
+   
+}
+.aktivnost p{
+    width: 70%;
+}
+
+.o_nama{
+    margin-top: 30px;
+    width: 100%;
+    padding: 40px;
+    height: fit-content;
+    
+    color: #000000;
+}
+.o_nama h1{
+    margin-bottom: 30px;
+}
+.o_nama p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.o_nama iframe{
+    width: 80%;
+    height: 400px;
+    margin: 40px 0;
+}
+.galerija{
+    width: 100%;
+    height: auto;
+    margin-top:50px;
+    color: #000000;
+}
+.gal{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.kolona{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.kolona img{
+    width: 100%;
+    margin-bottom: 20px ;
+    border:white solid 4px;
+    border-radius: 10px;
+}
+.kolona:nth-child(2){
+    margin-top: 40px;
+}
+.opremljenost{
+    width: 100%;
+    height: auto;
+    padding: 20px 40px;
+    
+    display: block;
+    color: #000000;
+    margin-top: 50px;
+    
+    
+}
+.ikone_opremljenost{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+.opremljenost h2{
+    font-size: 30px;
+    
+}
+.opremljenost p{
+    font-size: 20px;
+}
+i{
+    color: #a91010;
+}
+.kontakt{
+    width: 100%;
+    margin-top: 40px;
+    padding: 40px;
+    height: auto;
+    color: #000000;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ikone_kontakt{
+    width: 45%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.ikone_kontakt p{
+    font-size: 20px;
+    font-weight: bold;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 2%;
+    margin-top: 20px;
+    align-items: center;
+}
+form input{
+    width: 90%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+form textarea{
+    max-width: 90%;
+    min-width: 90%;
+    max-height: 50px;
+    margin-bottom: 10px;
+
+}
+.popup{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.dugme{
+    
+    color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0) solid thin;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    
+}
+.popuptext{
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+#myBtn i{
+    color: #ffffff;
+}
+
